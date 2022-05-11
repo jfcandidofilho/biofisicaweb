@@ -1,0 +1,440 @@
+<div class="content grid">
+
+    <div class="empty column"></div>
+
+    <div class="equation">
+
+        <!-- Nernst -->
+        <h3 class="nernst equation title">Equação de Nernst</h3>
+
+        <div class="nernst equation grid">
+
+            <!-- Nernst Latex Equation -->
+            <div class="nernst equation parent">
+                <div lang="latex" class="nernst equation child">
+                    $$E_{íon} = - { 61 \over Z } . log ({ C_i \over C_e })$$
+                </div>
+            </div>
+
+            <!-- Empty Column -->
+            <div class="empty column"></div>
+
+            <!-- Nernst Calculated Result -->
+            <div class="nernst equation result grid">
+
+                <!-- Potassium -->
+                <div class="nernst equation result ion K">
+                    <div class="nernst equation result title">
+                        E<sub>K</sub>
+                    </div>
+                    <div class="nernst equation result target EK">0</div>
+                </div>
+
+                <!-- Empty Column -->
+                <div class="empty column"></div>
+
+                <!-- Natrium -->
+                <div class="nernst equation result ion Na">
+                    <div class="nernst equation result title">
+                        E<sub>Na</sub>
+                    </div>
+                    <div class="nernst equation result target ENa">0</div>
+                </div>
+
+                <!-- Empty Column -->
+                <div class="empty column"></div>
+
+                <!-- Clorum -->
+                <div class="nernst equation result ion Cl">
+                    <div class="nernst equation result title">
+                        E<sub>Cl</sub>
+                    </div>
+                    <div class="nernst equation result target ECl">0</div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Goldman -->
+        <h3 class="goldman equation title">Equação de Goldman</h3>
+
+        <div class="goldman equation grid">
+
+            <!-- Goldman Latex Equation -->
+            <div class="goldman equation parent">
+                <div lang="latex" class="goldman equation child">
+                    $$ E_m = - 61 . log {{ ({C_{i_K}.P_K}) + ({C_{i_{Na}}.P_{Na}}) + ({C_{e_{Cl}}.P_{Cl}}) } \over {
+                    ({C_{e_K}.P_K}) + ({C_{e_{Na}}.P_{Na}}) + ({C_{i_{Cl}}.P_{Cl}}) }} $$
+                </div>
+            </div>
+
+            <!-- Empty Column -->
+            <div class="empty column"></div>
+
+            <!-- Goldman Calculated Result -->
+            <div class="goldman equation result grid">
+
+                <div class="goldman equation result ion">
+                    <div class="goldman equation result title">
+                        E<sub>m<sub>goldman</sub></sub>
+                    </div>
+                    <div class="goldman equation result target">
+                        0
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Condutividade -->
+        <h3 class="condutividade equation title">Equação da Condutividade</h3>
+
+        <div class="condutividade equation grid">
+
+            <!-- Condutividade Latex Equation -->
+            <div class="condutividade equation parent">
+                <div lang="latex" class="condutividade equation child">
+                    $$ E_m = {{ (g_K.E_K) + (g_{Na}.E_{Na}) + (g_{Cl}.E_{Cl}) } \over { g_K + g_{Na} + g_{Cl} }} $$
+                </div>
+            </div>
+
+            <!-- Empty Column -->
+            <div class="empty column"></div>
+
+            <!-- Condutividade Calculated Result -->
+            <div class="condutividade equation result grid">
+
+                <div class="condutividade equation result ion">
+                    <div class="condutividade equation result title">
+                        E<sub>m<sub>condutividade</sub></sub>
+                    </div>
+                    <div class="condutividade equation result target">
+                        0
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Resultados -->
+        <!-- <h4 class="equation title">
+        Resultado: <span class="target"></span>
+
+        <math class="unicodemath" xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+            <mrow>
+              <msub>
+                <mi>𝐸</mi>
+                <mi>íon</mi>
+              </msub>
+              <mo>=</mo>
+              <mo>−</mo>
+              <mfrac>
+                <mn>61</mn>
+                <mi>𝑍</mi>
+              </mfrac>
+              <mrow>
+                <mi>log</mi>
+                <mo>&ApplyFunction;</mo>
+                <mrow>
+                  <mo>(</mo>
+                  <mfrac>
+                    <msub>
+                      <mi>𝐶</mi>
+                      <mi>𝑖</mi>
+                    </msub>
+                    <msub>
+                      <mi>𝐶</mi>
+                      <mi>𝑒</mi>
+                    </msub>
+                  </mfrac>
+                  <mo>)</mo>
+                </mrow>
+              </mrow>
+            </mrow>
+          </math>
+
+    </h4> -->
+
+        <div>
+
+            <canvas id="cekek" width="400" height="400"></canvas>
+
+        </div>
+
+    </div>
+
+    <div class="empty column"></div>
+
+    <div class="variables">
+
+        <h3 class="variables title">Controle de Variáveis</h3>
+
+        <div>&nbsp;</div>
+
+        <div>Padrões de Permeabilidade e Condutividade</div>
+
+        <div>&nbsp;</div>
+
+        <div class="variables grid default" style="padding: 2em;">
+
+            <div class="empty column"></div>
+            <div class="parent">
+                <div class="child">
+                    <input class="default state input rest" type="radio" value="rest" name="state" checked="checked" />
+                </div>
+            </div>
+            <div class="parent">
+                <div class="default state child rest">
+                    Repouso
+                </div>
+            </div>
+            <div class="empty column"></div>
+            <div class="parent">
+                <div class="child">
+                    <input class="default state input pike" type="radio" value="pike" name="state" />
+                </div>
+            </div>
+            <div class="parent">
+                <div class="default state child pike">
+                    Pico
+                </div>
+            </div>
+            <div class="empty column"></div>
+            <div class="parent">
+                <div class="child">
+                    <input class="default state input hyper" type="radio" value="hyper" name="state" />
+                </div>
+            </div>
+            <div class="parent">
+                <div class="default state child hyper">
+                    Hiperpolarizado
+                </div>
+            </div>
+            <div class="empty column"></div>
+
+        </div>
+
+        <div>&nbsp;</div>
+
+        <div>Padrões de Concentração</div>
+
+        <div>&nbsp;</div>
+
+        <div class="variables grid default" style="padding: 2em;">
+
+            <div class="empty column"></div>
+            <div class="parent blank">
+                <div class="child">
+                    <input class="default concentration input plasma" type="radio" value="plasma" name="concentration"
+                        disabled="disabled" />
+                </div>
+            </div>
+            <div class="parent blank">
+                <div class="default concentration child plasma">
+
+                </div>
+            </div>
+            <div class="empty column"></div>
+            <div class="parent">
+                <div class="child">
+                    <input class="default concentration input propagation" type="radio" value="propagation"
+                        name="concentration" checked="checked" />
+                </div>
+            </div>
+            <div class="parent">
+                <div class="default concentration child propagation">
+                    Propagação
+                </div>
+            </div>
+            <div class="empty column"></div>
+            <div class="parent blank">
+                <div class="child">
+                    <input class="default concentration input ecm" type="radio" value="ecm" name="concentration"
+                        disabled="disabled" />
+                </div>
+            </div>
+            <div class="parent blank">
+                <div class="default concentration child ecm">
+
+                </div>
+            </div>
+            <div class="empty column"></div>
+
+        </div>
+
+        <div>&nbsp;</div>
+
+        <div class="variables grid">
+
+            <!-- pK -->
+            <div class="empty column"></div>
+            <div class="parent">
+                <div class="child">pK</div>
+            </div>
+            <div class="empty column"></div>
+            <div class="ranger">
+                <input class="ranger input pK" type="range" min="1" value="650" max="75000" step="1" />
+                <div class="ranger value pK">650</div>
+            </div>
+            <div class="empty column"></div>
+
+
+            <!-- CiK -->
+            <div class="empty column"></div>
+            <div class="parent">
+                <div class="child">CiK</div>
+            </div>
+            <div class="empty column"></div>
+            <div class="ranger">
+                <input class="ranger input CiK" type="range" min="0.01" value="150" max="200" step="0.01" />
+                <div class="ranger value CiK">150</div>
+            </div>
+            <div class="empty column"></div>
+
+            <!-- CeK -->
+            <div class="empty column"></div>
+            <div class="parent">
+                <div class="child">CeK</div>
+            </div>
+            <div class="empty column"></div>
+            <div class="ranger">
+                <input class="ranger input CeK" type="range" min="0.01" value="4" max="200" step="0.01" />
+                <div class="ranger value CeK">4</div>
+            </div>
+            <div class="empty column"></div>
+
+            <!-- gK -->
+            <div class="empty column"></div>
+            <div class="parent">
+                <div class="child">gK</div>
+            </div>
+            <div class="empty column"></div>
+            <div class="ranger">
+                <input class="ranger input gK" type="range" min="0.01" value="0.45" max="100" step="0.01" />
+                <div class="ranger value gK">0.45</div>
+            </div>
+            <div class="empty column"></div>
+
+            <!-- Spacer -->
+            <div></div>
+            <div>&nbsp;</div>
+            <div></div>
+            <div>&nbsp;</div>
+            <div></div>
+
+            <!-- pNa -->
+            <div class="empty column"></div>
+            <div class="parent">
+                <div class="child">pNa</div>
+            </div>
+            <div class="empty column"></div>
+            <div class="ranger">
+                <input class="ranger input pNa" type="range" min="1" value="15" max="75000" step="1" />
+                <div class="ranger value pNa">15</div>
+            </div>
+            <div class="empty column"></div>
+
+            <!-- CiNa -->
+            <div class="empty column"></div>
+            <div class="parent">
+                <div class="child">CiNa</div>
+            </div>
+            <div class="empty column"></div>
+            <div class="ranger">
+                <input class="ranger input CiNa" type="range" min="0.01" value="15" max="200" step="0.01" />
+                <div class="ranger value CiNa">15</div>
+            </div>
+            <div class="empty column"></div>
+
+            <!-- CeNa -->
+            <div class="empty column"></div>
+            <div class="parent">
+                <div class="child">CeNa</div>
+            </div>
+            <div class="empty column"></div>
+            <div class="ranger">
+                <input class="ranger input CeNa" type="range" min="0.01" value="145" max="200" step="0.01" />
+                <div class="ranger value CeNa">145</div>
+            </div>
+            <div class="empty column"></div>
+
+            <!-- gNa -->
+            <div class="empty column"></div>
+            <div class="parent">
+                <div class="child">gNa</div>
+            </div>
+            <div class="empty column"></div>
+            <div class="ranger">
+                <input class="ranger input gNa" type="range" min="0.01" value="0.03" max="100" step="0.01" />
+                <div class="ranger value gNa">0.03</div>
+            </div>
+            <div class="empty column"></div>
+
+            <!-- Spacer -->
+            <div></div>
+            <div>&nbsp;</div>
+            <div></div>
+            <div>&nbsp;</div>
+            <div></div>
+
+            <!-- pCl -->
+            <div class="empty column"></div>
+            <div class="parent">
+                <div class="child">pCl</div>
+            </div>
+            <div class="empty column"></div>
+            <div class="ranger">
+                <input class="ranger input pCl" type="range" min="1" value="45" max="75000" step="1" />
+                <div class="ranger value pCl">45</div>
+            </div>
+            <div class="empty column"></div>
+
+            <!-- CiCl -->
+            <div class="empty column"></div>
+            <div class="parent">
+                <div class="child">CiCl</div>
+            </div>
+            <div class="empty column"></div>
+            <div class="ranger">
+                <input class="ranger input CiCl" type="range" min="0.01" value="5" max="200" step="0.01" />
+                <div class="ranger value CiCl">5</div>
+            </div>
+            <div class="empty column"></div>
+
+            <!-- CeCl -->
+            <div class="empty column"></div>
+            <div class="parent">
+                <div class="child">CeCl</div>
+            </div>
+            <div class="empty column"></div>
+            <div class="ranger">
+                <input class="ranger input CeCl" type="range" min="0.01" value="100" max="200" step="0.01" />
+                <div class="ranger value CeCl">100</div>
+            </div>
+            <div class="empty column"></div>
+
+            <!-- gCl -->
+            <div class="empty column"></div>
+            <div class="parent">
+                <div class="child">gCl</div>
+            </div>
+            <div class="empty column"></div>
+            <div class="ranger">
+                <input class="ranger input gCl" type="range" min="0.01" value="0.15" max="100" step="0.01" />
+                <div class="ranger value gCl">0.15</div>
+            </div>
+            <div class="empty column"></div>
+
+        </div>
+
+
+        <!--Button onclick="javascript: calc_condutividade()"></button-->
+
+    </div>
+
+    <div class="empty column"></div>
+
+</div>

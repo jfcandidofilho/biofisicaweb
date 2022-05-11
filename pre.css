@@ -1,0 +1,29 @@
+.question.title,
+.answer.title {
+
+    padding: 1em;
+
+    background-color: #435e7a;
+    color: aliceblue;
+
+}
+
+.question.grid {
+
+    display: grid;
+
+    grid-template-rows: auto;
+ 
+    grid-template-columns: 1fr 18fr 1fr ;
+
+}
+
+.answer.grid {
+
+   display: grid;
+
+   grid-template-rows: auto;
+
+   grid-template-columns: 1fr 1fr 1fr 16fr 1fr ;
+
+}
