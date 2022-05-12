@@ -29,10 +29,15 @@
 	<script src="./bubble.js" type="text/javascript"></script>
 	<script src="./graph-draw.js" type="text/javascript"></script>
 	<script src="./ajax.js" type="text/javascript"></script>
+	<script src="./action.js" type="text/javascript"></script>
+
+	<script src="./deprecated_ajax.js" type="text/javascript"></script>
 
 </head>
 
 <body>
+
+	<div id="error" class="error"></div>
 
 	<div class="top-bar">
 		&nbsp;
@@ -42,37 +47,7 @@
 		<h1>Biofísica Web</h1>
 	</div>
 
-	<div class="menu">
-		
-		<a href="#introducao" alt="Uma Introdução ao Biofísica Web" onclick="javascript: fetch_file('GET','intro.html');">
-			INTRODUÇÃO
-		</a>
-
-		&nbsp;
-		
-		<a href="#objetivos" alt="Os Objetivos do Biofísica Web" onclick="javascript: fetch_file('GET','obj.html');">
-			OBJETIVOS
-		</a>
-		
-		&nbsp;
-
-		<a href="#pre-teste" alt="Pré-Testes dos Experimentos" onclick="javascript: fetch_file('GET','pre.html');">
-			PRÉ-TESTE
-		</a>
-		
-		&nbsp;
-
-		<a href="#experimentos" alt="Experimentos a serem explorados" onclick="javascript: fetch_file('GET','lab.html');">
-			EXPERIMENTOS
-		</a>
-		
-		&nbsp;
-
-		<a href="#pos-teste" alt="Pós-Testes dos Experimentos" onclick="javascript: fetch_file('GET','pos.html');">
-			PÓS-TESTE
-		</a>
-	
-	</div>
+	<div id="menu" class="menu"></div>
 
 	<div id="content">
 	</div>
