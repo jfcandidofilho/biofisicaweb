@@ -41,3 +41,10 @@ function act_menu( content ){
     act( "menu", content, false );
 
 }
+
+// Act the navigated page's content
+function act_content( content ){
+
+    act( "content", content );
+
+}
