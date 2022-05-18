@@ -1,17 +1,7 @@
 // Variables list
 var val = null;
 
-function round( x, decimals = 2 ){
-
-    var multiplier = Math.pow( 10, decimals );
-
-    return ( Math.round( x * multiplier ) / multiplier ).toFixed( 2 );
-
-    //DEBUG
-    // return x;
-
-}
-
+// Updates variables
 function update_variables() {
 
     var ranger = document.getElementsByClassName("ranger input");
@@ -39,18 +29,19 @@ function update_variables() {
 
     }
 
-    console.table( val );
+    //console.table( val );
 
 }
 
+// Calculates NERNST equation
 function calc_nernst(){
 
-    console.log("val.EK", val.EK);
-
+    // Calculates
     val.EK  = ( -61 / 1 ) * Math.log10( val.CiK / val.CeK );
     val.ENa = ( -61 / 1 ) * Math.log10( val.CiNa / val.CeNa );
     val.ECl = ( -61 / -1 ) * Math.log10( val.CiCl / val.CeCl );
 
+    // Updates screen
     document.getElementsByClassName("nernst target EK")[0].innerHTML = round( val.EK );
     document.getElementsByClassName("nernst target ENa")[0].innerHTML = round( val.ENa );
     document.getElementsByClassName("nernst target ECl")[0].innerHTML = round( val.ECl );
@@ -66,13 +57,16 @@ function calc_nernst(){
             "\nECl =", val.ECl
             );
 
-        console.table(val);
+        // DEBUG
+        // console.table( val );
         }
 
 }
 
+// Calculates GOLDMAN equation
 function calc_goldman(){
 
+    // Calculates
     var Em = -61 * Math.log10( 
         (
             ( val.CiK * val.pK ) + 
@@ -85,6 +79,7 @@ function calc_goldman(){
             ) 
     );
 
+    // Updates screen
     document.getElementsByClassName("goldman target")[0].innerHTML = round( Em );
 
     // Console
@@ -92,12 +87,14 @@ function calc_goldman(){
 
 }
 
+// Calculates CONDUTIVITY equation
 function calc_condutividade(){
 
     // In case it condutividade is called first, wrong values for
     // Nernst will be used. So, need to call it here.
     calc_nernst();
 
+    // Calculates
     var Em =( 
             ( val.gK * val.EK ) + 
             ( val.gNa * val.ENa ) + 
@@ -105,6 +102,7 @@ function calc_condutividade(){
         ) / ( val.gK + val.gNa + val.gCl ) 
     ;
 
+    // Updates screen
     document.getElementsByClassName("condutividade target")[0].innerHTML = round( Em );
 
     // Console
@@ -112,18 +110,7 @@ function calc_condutividade(){
 
 }
 
-function set_range( target, value ){
-
-    var e = document.getElementsByClassName(
-        "ranger input " + target
-    )[0];
-
-    e.value = value;
-
-    e.dispatchEvent( new Event( "input" ) );
-
-}
-
+// Set the pre-defined state for the variables
 function set_state( state ){
 
     switch( state ){
@@ -196,11 +183,3 @@ function set_state( state ){
     }
 
 }
-
-window.addEventListener('load', function () {
-
-    //renderUnicodemath();
-
-    fetch_file('GET','intro.html');
-
-});

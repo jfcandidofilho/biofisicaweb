@@ -46,5 +46,40 @@ function act_menu( content ){
 function act_content( content ){
 
     act( "content", content );
+    
+    // BUG
+    // All of the code below SHOULD WORK with only action_page.js
+    // But it doesn't 
+
+    // Updates variables holding values for calculation
+    update_variables();
+
+    // Add action to elements events
+    add_event_to( classes.ranger, events.ranger, [callbacks.ranger] );
+
+    add_event_to( classes.percon, events.percon, 
+        [callbacks.percon, callbacks.percon] 
+        );
+
+    add_event_to( classes.concen, events.concen, 
+        [callbacks.concen, callbacks.concen] 
+        );
+
+    // Updates variables holding values for calculation
+    update_variables();
+
+    // Calculates and (internally) updates variables
+    calc_nernst();
+    calc_condutividade();
+    calc_goldman();
+
+    // Draws LATEX with MathJax after an AJAX async page load
+    MathJax.typeset();
+
+    // Bubbles the values calculated
+    set_bubble();
+
+    // Draws the graph of correlations
+    graph_draw();
 
 }

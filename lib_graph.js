@@ -1,3 +1,5 @@
+/** DEPENDENDS ON chart.js (CDN) */
+
 function graph_draw() {
 
     const ctx = document.getElementById('cekek').getContext('2d');

@@ -1,5 +1,5 @@
 // MENU entries
-var menu = {
+var menu_entries = {
 
     item :  [
         "introducao", 
@@ -30,13 +30,13 @@ var menu = {
 // Generate the MENU
 function gen_menu(){
 
-    for( var i = 0; i < menu.item.length; i++ ){
+    for( var i = 0; i < menu_entries.item.length; i++ ){
     
         fetch(
     
             "template_menu.php", 
             
-            "item=" + menu.item[i] + "&alt=" + menu.alt[i] + "&text=" + menu.text[i],
+            "item=" + menu_entries.item[i] + "&alt=" + menu_entries.alt[i] + "&text=" + menu_entries.text[i],
             
             "GET", true, act_menu
             

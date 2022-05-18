@@ -1,5 +1,6 @@
-var rangeSlider = function () {
-
+// This "object" will "bubble" the events and update ranger inputs
+var set_bubble = function () {
+    
     var slider  = document.querySelectorAll(".ranger"),
         ranger  = document.querySelectorAll(".ranger input"),
         values  = document.querySelectorAll(".ranger value");
@@ -33,8 +34,15 @@ var rangeSlider = function () {
     });
 };
 
-window.addEventListener('load', function () {
-    
-    rangeSlider();
+// Set the given input range value and invokes the event
+function set_range( target, value ){
 
-});
+    var e = document.getElementsByClassName(
+        "ranger input " + target
+    )[0];
+
+    e.value = value;
+
+    e.dispatchEvent( new Event( "input" ) );
+
+}
