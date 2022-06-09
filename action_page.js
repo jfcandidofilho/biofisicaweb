@@ -12,6 +12,21 @@ function load_page( file_name ){
 
     fetch( file_name + ".html", null, "GET", true, act_content );
 
+    // Case the loaded page is the "Introdução" page:
+    if( file_name.localeCompare( "introducao" ) == 0 ) {
+
+        console.log("intro");
+
+        // Cleans MathJax
+        MathJax.typesetClear();
+
+        // Draws LATEX with MathJax after an AJAX async page load
+        MathJax.typeset();
+
+        console.log("intro ok");
+
+    }
+
     // Case the loaded page is the "Experimentos" page:
     if( file_name.localeCompare( "experimento" ) == 0 ) {
 
