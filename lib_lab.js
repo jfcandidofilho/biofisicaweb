@@ -3,6 +3,13 @@ var val = null;
 
 /**
  * 
+ * DEPRECATED
+ * Does not work exactly as imagined because it almost never
+ * is true
+ * 
+ * USING '?.' (Optional Chaining)
+ * By the use of polyfill
+ * 
  * "..." in window
  * verifies if '...' was created but not exactly defined
  * meaning the structure is there but not the values
@@ -14,28 +21,35 @@ var val = null;
 function update_variables() {
 
     var ranger = document.getElementsByClassName("ranger input");
-
-    // BUG - works for other pages but it never finds getEle... of more than one class. So it doesn't work for the experiments page where it should.
-    var created = "ranger" in window;
-
-    console.log("created? ", created, ranger, typeof ranger);
-
+    
     val = {
 
-        pK      : !created ? 0 : parseFloat( ranger[0].value ),
-        CiK     : !created ? 0 : parseFloat( ranger[1].value ),
-        CeK     : !created ? 0 : parseFloat( ranger[2].value ),
-        gK      : !created ? 0 : parseFloat( ranger[3].value ),
+        pK      :   parseFloat( nullishRet( 
+                        optionalChain( ranger, 0 ), '1' ).value ),
+        CiK     :   parseFloat( nullishRet( 
+                        optionalChain( ranger, 1 ), '1' ).value ),
+        CeK     :   parseFloat( nullishRet( 
+                        optionalChain( ranger, 2 ), '1' ).value ),
+        gK      :   parseFloat( nullishRet( 
+                        optionalChain( ranger, 3 ), '1' ).value ),
         
-        pNa     : !created ? 0 : parseFloat( ranger[4].value ),
-        CiNa    : !created ? 0 : parseFloat( ranger[5].value ),
-        CeNa    : !created ? 0 : parseFloat( ranger[6].value ),
-        gNa     : !created ? 0 : parseFloat( ranger[7].value ),
+        pNa     :   parseFloat( nullishRet( 
+                        optionalChain( ranger, 4 ), '1' ).value ),
+        CiNa    :   parseFloat( nullishRet( 
+                        optionalChain( ranger, 5 ), '1' ).value ),
+        CeNa    :   parseFloat( nullishRet( 
+                        optionalChain( ranger, 6 ), '1' ).value ),
+        gNa     :   parseFloat( nullishRet( 
+                        optionalChain( ranger, 7 ), '1' ).value ),
         
-        pCl     : !created ? 0 : parseFloat( ranger[8].value ),
-        CiCl    : !created ? 0 : parseFloat( ranger[9].value ),
-        CeCl    : !created ? 0 : parseFloat( ranger[10].value ),
-        gCl     : !created ? 0 : parseFloat( ranger[11].value ),
+        pCl     :   parseFloat( nullishRet( 
+                        optionalChain( ranger, 8 ), '1' ).value ),
+        CiCl    :   parseFloat( nullishRet( 
+                        optionalChain( ranger, 9 ), '1' ).value ),
+        CeCl    :   parseFloat( nullishRet(
+                        optionalChain( ranger, 10 ), '1' ).value ),
+        gCl     :   parseFloat( nullishRet(
+                        optionalChain( ranger, 11 ), '1' ).value ),
 
         EK      : isNaN(this.EK) ? 0 : this.EK,
         ENa     : isNaN(this.ENa) ? 0 : this.ENa,
@@ -56,15 +70,20 @@ function calc_nernst(){
     val.ECl = ( -61 / -1 ) * Math.log10( val.CiCl / val.CeCl );
 
     // Updates screen
-    var ek = document.getElementsByClassName("nernst target EK")[0];
-    var ena = document.getElementsByClassName("nernst target ENa")[0];
-    var ecl = document.getElementsByClassName("nernst target ECl")[0];
-  
-    console.log("test...", "ek" in window);
+    var ek = document.getElementsByClassName("nernst target EK");
+    var ena = document.getElementsByClassName("nernst target ENa");
+    var ecl = document.getElementsByClassName("nernst target ECl");
 
-    "ek" in window ? ek.innerHTML = round( val.EK ) : null;
-    "ena" in window ? ena.innerHTML = round( val.ENa ) : null;
-    "ecl" in window ? ecl.innerHTML = round( val.ECl ) : null;
+    var opChain;
+    
+    opChain = nullishRet( optionalChain( ek, 0 ), false );
+    opChain ? opChain.innerHTML = round( val.EK ) : null;
+    
+    opChain = nullishRet( optionalChain( ena, 0 ), false );
+    opChain ? opChain.innerHTML = round( val.ENa ) : null;
+
+    opChain = nullishRet( optionalChain( ecl, 0 ), false );
+    opChain ? opChain.innerHTML = round( val.ECl ) : null;
 
     // Console
     if( val.EK == val.ENa && val.ENa == val.ECl )
@@ -100,9 +119,12 @@ function calc_goldman(){
     );
 
     // Updates screen
-    var goldtar = document.getElementsByClassName("goldman target")[0];
+    var goldtar = document.getElementsByClassName("goldman target");
+
+    var opChain;
     
-    "goldtar" in window ? goldtar.innerHTML = round( Em ) : null;
+    opChain = nullishRet( optionalChain( goldtar, 0 ), false );
+    opChain ? opChain.innerHTML = round( Em ) : null;
 
     // Console
     console.log( "Goldman -> Em =", Em );
@@ -125,9 +147,12 @@ function calc_condutividade(){
     ;
 
     // Updates screen
-    var condtar = document.getElementsByClassName("condutividade target")[0];
+    var condtar = document.getElementsByClassName("condutividade target");
 
-    "condtar" in window ? condtar.innerHTML = round( Em ) : null;
+    var opChain;
+    
+    opChain = nullishRet( optionalChain( condtar, 0 ), false );
+    opChain ? opChain.innerHTML = round( Em ) : null;
 
     // Console
     console.log( "Condutividade -> Em =", Em );
