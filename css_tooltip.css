@@ -1,0 +1,34 @@
+.parent.ion {
+
+    cursor: help;
+
+}
+
+.parent.ion:hover .child.tooltip {
+
+    display: block;
+
+}
+
+.parent .child.tooltip {
+
+    display: none;
+    
+    border: 2px solid #cccccc;
+
+    background-color: #4477aa;
+    color: #fff;
+
+    font-variant: small-caps;
+    font-weight: bold;
+    text-align: center;
+    
+    margin-left: 60px;
+    padding: 0.5em;
+    position: absolute;
+    z-index: 2;
+    width: 150px;
+
+}
+
+.tooltip .mono { font-family: monospace; font-variant: none; }
