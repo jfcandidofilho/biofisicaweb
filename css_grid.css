@@ -40,53 +40,47 @@
     /* css_equations */
 
     grid-template-columns: 8fr 1fr 11fr;
- 
- }
 
- .equation.grid:not(.nernst) {
+}
+
+.equation.grid:not(.nernst) {
     /* css_equations */
- 
+
     grid-template-columns: 13fr 1fr 6fr;
- 
- }
- 
- .equation.result.nernst.grid {
+
+}
+
+.equation.result.nernst.grid {
     /* css_equations */
- 
+
     grid-template-columns: 10fr 1fr 10fr 1fr 10fr;
- 
- }
- 
- .equation.result.grid:not(.nernst) {
+
+}
+
+.equation.result.grid:not(.nernst) {
     /* css_equations */
- 
+
     grid-template-columns: 1fr;
- 
- }
- 
- .equation.result.goldman.condutivity.grid {
+
+}
+
+.equation.result.goldman.condutivity.grid {
     /* css_equations */
- 
+
     grid-template-columns: 10fr 1fr 10fr;
- 
- }
 
- .question.grid {
-    /* css_preteste */
-  
-     grid-template-columns: 1fr 18fr 1fr ;
- 
- }
- 
- .answer.grid {
-    /* css_preteste */
- 
-    grid-template-columns: 1fr 1fr 1fr 16fr 1fr ;
- 
- }
+}
 
- Russian forces lost 
- 4 su-30, 
- 8 su-34, 
- 1 su-35 
- Total of 13 of 873 fighter aircrafts of 2020
+.question.grid {
+    /* css_preteste */
+
+    grid-template-columns: 1fr 18fr 1fr;
+
+}
+
+.answer.grid {
+    /* css_preteste */
+
+    grid-template-columns: 1fr 1fr 1fr 16fr 1fr;
+
+}
