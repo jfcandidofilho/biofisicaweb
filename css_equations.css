@@ -47,15 +47,25 @@
  
  .equation.result.grid:not(.nernst) {
  
-    display: grid;
+   display: grid;
+
+   grid-template-rows: auto;
+
+   grid-template-columns: 1fr;
+
+}
+
+.equation.result.grid.goldman.condutivity {
  
-    grid-template-rows: auto;
- 
-    grid-template-columns: 1fr;
- 
- }
- 
- .equation.result.grid {
+   display: grid;
+
+   grid-template-rows: auto;
+
+   grid-template-columns: 10fr 1fr 10fr;
+
+}
+
+.equation.result.grid {
  
     padding: 0.5em;
  
