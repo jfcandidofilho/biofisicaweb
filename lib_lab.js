@@ -77,13 +77,13 @@ function calc_nernst(){
     var opChain;
     
     opChain = nullishRet( optionalChain( ek, 0 ), false );
-    opChain ? opChain.innerHTML = round( val.EK ) : null;
+    opChain ? opChain.innerHTML = round( val.EK ) + " mV" : null;
     
     opChain = nullishRet( optionalChain( ena, 0 ), false );
-    opChain ? opChain.innerHTML = round( val.ENa ) : null;
+    opChain ? opChain.innerHTML = round( val.ENa ) + " mV" : null;
 
     opChain = nullishRet( optionalChain( ecl, 0 ), false );
-    opChain ? opChain.innerHTML = round( val.ECl ) : null;
+    opChain ? opChain.innerHTML = round( val.ECl ) + " mV" : null;
 
     // Console
     if( val.EK == val.ENa && val.ENa == val.ECl )
@@ -124,7 +124,7 @@ function calc_goldman(){
     var opChain;
     
     opChain = nullishRet( optionalChain( goldtar, 0 ), false );
-    opChain ? opChain.innerHTML = round( Em ) : null;
+    opChain ? opChain.innerHTML = round( Em ) + " mV" : null;
 
     // Console
     console.log( "Goldman -> Em =", Em );
@@ -152,7 +152,7 @@ function calc_condutividade(){
     var opChain;
     
     opChain = nullishRet( optionalChain( condtar, 0 ), false );
-    opChain ? opChain.innerHTML = round( Em ) : null;
+    opChain ? opChain.innerHTML = round( Em ) + " mV" : null;
 
     // Console
     console.log( "Condutividade -> Em =", Em );
