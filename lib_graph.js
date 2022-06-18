@@ -66,7 +66,7 @@ function graph_draw() {
             plugins: {
                 title: {
                     display: true,
-                    text: 'Interpolação cúbica das concentrações de externas potássio e potencial do potássio'
+                    text: 'Interpolação cúbica das concentrações externas e potencial'
                 },
                 tooltip: {
                     callbacks: {
@@ -104,7 +104,7 @@ function graph_draw() {
                     display: true,
                     title: {
                         display: true,
-                        text: '[K]e'
+                        text: '[K]e (mM)'
                     },
                     ticks: {
                         callback: function (label_list, index) {
@@ -117,7 +117,7 @@ function graph_draw() {
                     display: true,
                     title: {
                         display: true,
-                        text: '[Na]e'
+                        text: '[Na]e (mM)'
                     },
                     ticks: {
                         callback: function (label_list, index) {
@@ -130,7 +130,7 @@ function graph_draw() {
                     display: true,
                     title: {
                         display: true,
-                        text: '[Cl]e'
+                        text: '[Cl]e (mM)'
                     },
                     ticks: {
                         callback: function (label_list, index) {
