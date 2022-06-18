@@ -1,3 +1,5 @@
+/* CSS for general site design */
+
 body {
 
    margin: 0;
@@ -149,71 +151,6 @@ body {
 .target {
 
    text-align: center;
-
-}
-
-.equation.grid.nernst {
-
-   display: grid;
-
-   grid-template-rows: auto;
-
-   grid-template-columns: 8fr 1fr 11fr;
-
-}
-
-.equation.grid:not(.nernst) {
-
-   display: grid;
-
-   grid-template-rows: auto;
-
-   grid-template-columns: 13fr 1fr 6fr;
-
-}
-
-.equation.result.ion {
-
-   padding: 0.5em;
-
-   background-color: #435e7a;
-   color: #fff;
-
-   border-radius: 10px 10px;
-
-   text-align: center;
-
-   font-weight: bold;
-
-}
-
-.equation.result.grid.nernst {
-
-   display: grid;
-
-   grid-template-rows: auto;
-
-   grid-template-columns: 10fr 1fr 10fr 1fr 10fr;
-
-}
-
-.equation.result.grid:not(.nernst) {
-
-   display: grid;
-
-   grid-template-rows: auto;
-
-   grid-template-columns: 1fr;
-
-}
-
-.equation.result.grid {
-
-   padding: 0.5em;
-
-   background-color: #ddd;
-
-   border-radius: 10px 10px;
 
 }
 

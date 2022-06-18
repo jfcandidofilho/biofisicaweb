@@ -10,7 +10,9 @@ var page_list = [
 // Loads the desired page
 function load_page( file_name ){
 
-    fetch( file_name + ".html", null, "GET", true, act_content );
+    fetch(  "page_" + file_name + ".html", 
+            null, "GET", true, act_content 
+        );
 
     // Case the loaded page is the "Introdução" page:
     if( file_name.localeCompare( "introducao" ) == 0 ) {
