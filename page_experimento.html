@@ -2,82 +2,92 @@
 
     <div class="empty column"></div>
 
-    <div class="equation">
+    <div class="graph bi column">
+
+        <h3 class="graph title">Gráfico Interativo</h3>
 
         <!-- CANVA for graphs -->
-        <div><canvas id="cekek" width="400" height="400"></canvas></div>
+        <div class="graph canvas" style="background-color: #fff; padding: 1em;">
+            <canvas id="graph_canva" width="400" height="400"></canvas>
+        </div>
 
         <div class="empty column">&nbsp;</div>
-
-        <!-- Nernst Calculated Result -->
-        <div class="nernst equation result grid">
-
-            <!-- Potassium -->
-            <div class="nernst equation result ion K">
-                <div class="nernst equation result title">
-                    E<sub>K</sub>
-                </div>
-                <div class="nernst equation result target EK">0</div>
-            </div>
-
-            <!-- Empty Column -->
-            <div class="empty column"></div>
-
-            <!-- Natrium -->
-            <div class="nernst equation result ion Na">
-                <div class="nernst equation result title">
-                    E<sub>Na</sub>
-                </div>
-                <div class="nernst equation result target ENa">0</div>
-            </div>
-
-            <!-- Empty Column -->
-            <div class="empty column"></div>
-
-            <!-- Clorum -->
-            <div class="nernst equation result ion Cl">
-                <div class="nernst equation result title">
-                    E<sub>Cl</sub>
-                </div>
-                <div class="nernst equation result target ECl">0</div>
-            </div>
-
-        </div>
-
-        <!-- Goldman & Condutividade Calculated Result -->
-        <div class="goldman condutivity equation result grid">
-
-            <div class="goldman condutivity equation result ion">
-                <div class="goldman equation result title">
-                    E<sub>m<sub>goldman</sub></sub>
-                </div>
-                <div class="goldman equation result target">
-                    0
-                </div>
-            </div>
-
-            <div class="empty column"></div>
-
-            <div class="condutividade equation result ion">
-                <div class="condutividade equation result title">
-                    E<sub>m<sub>condutividade</sub></sub>
-                </div>
-                <div class="condutividade equation result target">
-                    0
-                </div>
-            </div>
-
-        </div>
 
     </div>
 
     <div class="empty column"></div>
 
-    <div class="variables">
+    <div class="control-panel bi column">
 
         <h3 class="variables title">Controle de Variáveis</h3>
 
-        <div>&nbsp;</div>
+        <div class="equation">
+
+            <!-- Nernst Calculated Result -->
+            <div class="nernst equation result grid">
+
+                <!-- Potassium -->
+                <div class="nernst equation result ion K">
+                    <div class="nernst equation result title">
+                        E<sub>K</sub>
+                    </div>
+                    <div class="nernst equation result target EK">0</div>
+                </div>
+
+                <!-- Empty Column -->
+                <div class="empty column"></div>
+
+                <!-- Natrium -->
+                <div class="nernst equation result ion Na">
+                    <div class="nernst equation result title">
+                        E<sub>Na</sub>
+                    </div>
+                    <div class="nernst equation result target ENa">0</div>
+                </div>
+
+                <!-- Empty Column -->
+                <div class="empty column"></div>
+
+                <!-- Clorum -->
+                <div class="nernst equation result ion Cl">
+                    <div class="nernst equation result title">
+                        E<sub>Cl</sub>
+                    </div>
+                    <div class="nernst equation result target ECl">0</div>
+                </div>
+
+            </div>
+
+            <div class="empty column">&nbsp;</div>
+
+            <!-- Goldman & Condutividade Calculated Result -->
+            <div class="goldman condutivity equation result grid">
+
+                <div class="goldman condutivity equation result ion">
+                    <div class="goldman equation result title">
+                        E<sub>m<sub>goldman</sub></sub>
+                    </div>
+                    <div class="goldman equation result target">
+                        0
+                    </div>
+                </div>
+
+                <div class="empty column"></div>
+
+                <div class="condutividade equation result ion">
+                    <div class="condutividade equation result title">
+                        E<sub>m<sub>condutividade</sub></sub>
+                    </div>
+                    <div class="condutividade equation result target">
+                        0
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="empty column">&nbsp;</div>
 
         <!-- <div>Padrões de Permeabilidade e Condutividade</div>
 
@@ -186,7 +196,6 @@
                 <div class="ranger value pK">650</div>
             </div>
             <div class="empty column"></div>
-
 
             <!-- CiK -->
             <div class="empty column"></div>
@@ -346,13 +355,6 @@
             <div class="empty column"></div>
 
         </div>
-
-        <!-- <div>&nbsp;</div>
-        <div>&nbsp;</div>
-
-        <div class="variables grid note">
-
-        </div> -->
 
     </div>
 

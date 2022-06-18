@@ -2,7 +2,7 @@
 
 function graph_draw() {
 
-    var ctx = document.getElementById('cekek');
+    var ctx = document.getElementById('graph_canva');
 
     if( ctx != null ) ctx = ctx.getContext('2d');
     else return 0;

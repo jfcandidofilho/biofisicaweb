@@ -1,8 +1,15 @@
 /* CSS for variables in page_experimento.html */
 
+.variables.grid {
+    /* css_grid */
+
+    padding: 1em;
+
+}
+
 .child.var { 
 
-    border-size: 2px;
+    border-width: 2px;
     border-style: solid;
 
     padding: 0.25em;
