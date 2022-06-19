@@ -1,33 +1,33 @@
 /** DEPENDENDS ON chart.js (CDN) */
 
+var labels = [
+    [0.1], 
+    [0.5], 
+    [1], 
+    [1.5], 
+    [2], 
+    [2.5], 
+    [3], 
+    [3.5], 
+    [4], 
+    [4.5], 
+    [5], 
+    [5.5], 
+    [6]
+];
+
+var datapoints = [
+
+    [-193.74, -151.10, -132.74, -122.00, -114.38, -108.47, -103.64, -99.55, -96.02, -92.90, -90.10, -87.58, -85.27]
+
+];
+
 function graph_draw() {
 
     var ctx = document.getElementById('graph_canva');
 
     if( ctx != null ) ctx = ctx.getContext('2d');
     else return 0;
-
-    const labels = [
-        [0.1], 
-        [0.5], 
-        [1], 
-        [1.5], 
-        [2], 
-        [2.5], 
-        [3], 
-        [3.5], 
-        [4], 
-        [4.5], 
-        [5], 
-        [5.5], 
-        [6]
-    ];
-
-    const datapoints = [
-
-        [-193.74, -151.10, -132.74, -122.00, -114.38, -108.47, -103.64, -99.55, -96.02, -92.90, -90.10, -87.58, -85.27]
-
-    ];
 
     const data = {
         labels: labels,
@@ -94,9 +94,7 @@ function graph_draw() {
                     title: {
                         display: true,
                         text: 'Ek (mV)'
-                    },
-                    suggestedMin: -200,
-                    suggestedMax: 70
+                    }
                 }
             }
         },
