@@ -7,25 +7,28 @@ var page_list = [
     "pos-teste" 
 ];
 
-// Loads the desired page
+// Loads the desired page and 
+// makes different actions depending on the page
 function load_page( file_name ){
 
     fetch(  "page_" + file_name + ".html", 
             null, "GET", true, act_content 
         );
 
-    // Case the loaded page is the "Introdução" page:
-    if( file_name.localeCompare( "introducao" ) == 0 ) {
+    // Cleans MathJax
+    MathJax.typesetClear();
 
-        console.log("intro");
+    // Draws LATEX with MathJax after an AJAX async page load
+    MathJax.typeset();
+    
+    // Case the loaded page is the "Pré-teste" page:
+    if ( file_name.localeCompare( 'pre-teste' ) == 0 ){
 
-        // Cleans MathJax
-        MathJax.typesetClear();
+        console.log( ":: pre-test loading..." );
 
-        // Draws LATEX with MathJax after an AJAX async page load
-        MathJax.typeset();
+        gen_pre();
 
-        console.log("intro ok");
+        console.log( ":: pre-test OK!" );
 
     }
 

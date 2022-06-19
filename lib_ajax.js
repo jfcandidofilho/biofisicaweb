@@ -83,3 +83,10 @@ function act_content( content ){
     graph_draw();
 
 }
+
+// Act the navigated page's content
+function act_pre( content ){
+
+    act( "content", content, false );
+
+}

@@ -8,4 +8,37 @@
     background-color: #435e7a;
     color: aliceblue;
 
+    margin: 0;
+
 }
+
+.question.text,
+.answer.options {
+
+    padding: 1em 1em;
+
+    background-color: aliceblue;
+
+    height: auto;
+    min-height: 115px;
+
+}
+
+.answer.line {
+
+    padding: 0.3em;
+
+}
+
+.answer.line:nth-child(odd) { 
+
+    background-color: rgb(226, 240, 253);
+
+ }
+ 
+ .answer.line:nth-child(even) { 
+
+    background-color: rgb(222, 230, 236);
+
+ }
+
