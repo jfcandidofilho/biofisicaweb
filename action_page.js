@@ -57,14 +57,27 @@ function load_page( file_name ){
         // Calculates and (internally) updates variables
         calc_nernst();
         calc_condutividade();
-        calc_goldman();
+        calc_goldman(); 
+        
+        // Updates variables holding values for calculation
+        update_variables();
         
         // Draws LATEX with MathJax after an AJAX async page load
         MathJax.typeset();
 
         // Bubbles the values calculated
-        set_bubble();
+        set_bubble(); 
 
+        // Set the graph to [K]e x EK
+        // dataset_labels = create_x( val.CeK );
+        // dataset_points = create_y( dataset_labels, 1, val.CiK );
+
+        console.table( "labels", dataset_labels );
+        console.table( "datapoints", dataset_points );
+        
+        // Destroy graph to build graph
+        //cenaena.destroy();
+        
         // Draws the graph of correlations
         graph_draw();
     

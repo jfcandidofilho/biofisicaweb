@@ -61,13 +61,44 @@ function update_variables() {
 
 }
 
-// Calculates NERNST equation
+// Calculates NERNST Equation
+function nernst( valence, internal, external ){
+
+    return ( ( -61 / valence ) * Math.log10( internal / external ) );
+
+}
+
+// Calculates GOLDMAN Equation
+function goldman( p, ci, ce ){
+
+   return ( 
+        -61 * Math.log10( (
+            ( ci.K * p.K ) + ( ci.Na * p.Na ) + ( ce.Cl * p.Cl )
+        ) / (
+            ( ce.K * p.K ) + ( ce.Na * p.Na ) + ( ci.Cl * p.Cl ) 
+        ) ) 
+    );
+
+}
+
+// Calculates CONDUTIVITY Equation
+function condutivity( e, g ){
+
+    return ( ( 
+        ( g.K * e.K ) + ( g.Na * e.Na ) + ( g.Cl * e.Cl ) 
+        ) / ( 
+        g.K + g.Na + g.Cl 
+        ) );
+
+}
+
+// Calculates NERNST equation and upates it
 function calc_nernst(){
 
     // Calculates
-    val.EK  = ( -61 / 1 ) * Math.log10( val.CiK / val.CeK );
-    val.ENa = ( -61 / 1 ) * Math.log10( val.CiNa / val.CeNa );
-    val.ECl = ( -61 / -1 ) * Math.log10( val.CiCl / val.CeCl );
+    val.EK  = nernst( 1, val.CiK, val.CeK );
+    val.ENa = nernst( 1, val.CiNa, val.CeNa );
+    val.ECl = nernst( -1, val.CiCl, val.CeCl );
 
     // Updates screen
     var ek = document.getElementsByClassName("nernst target EK");
@@ -106,16 +137,10 @@ function calc_nernst(){
 function calc_goldman(){
 
     // Calculates
-    var Em = -61 * Math.log10( 
-        (
-            ( val.CiK * val.pK ) + 
-            ( val.CiNa * val.pNa ) + 
-            ( val.CeCl * val.pCl )
-        ) / (
-            ( val.CeK * val.pK ) + 
-            ( val.CeNa * val.pNa ) + 
-            ( val.CiCl * val.pCl )
-            ) 
+    var Em = goldman( 
+        { K : val.pK, Na: val.pNa, Cl: val.pCl },
+        { K : val.CiK, Na: val.CiNa, Cl: val.CiCl },
+        { K : val.CeK, Na: val.CeNa, Cl: val.CeCl }
     );
 
     // Updates screen
@@ -139,12 +164,10 @@ function calc_condutividade(){
     calc_nernst();
 
     // Calculates
-    var Em =( 
-            ( val.gK * val.EK ) + 
-            ( val.gNa * val.ENa ) + 
-            ( val.gCl * val.ECl ) 
-        ) / ( val.gK + val.gNa + val.gCl ) 
-    ;
+    var Em = condutivity( 
+        { K : val.EK, Na: val.ENa, Cl: val.ECl },
+        { K : val.gK, Na: val.gNa, Cl: val.gCl }
+    );
 
     // Updates screen
     var condtar = document.getElementsByClassName("condutividade target");
