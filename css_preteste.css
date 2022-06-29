@@ -1,44 +1,49 @@
 /* CSS for page_pre-teste.html */
 
-.question.title,
-.answer.title {
+.box {
 
-    padding: 1em;
+    padding: 0.5em;
+
+}
+
+.content.pos,
+.content.pre {
+
+    padding: 0.5em 20%;
+
+    background-color:rgb(160, 183, 206);
+
+}
+
+.test.box {
+
+    background-color: rgb(160, 183, 206);
+
+
+}
+
+.question.box {
 
     background-color: #435e7a;
-    color: aliceblue;
-
-    margin: 0;
+    color: rgb(253, 253, 238);
 
 }
 
-.question.text,
-.answer.options {
+.question.box .text { 
 
-    padding: 1em 1em;
-
-    background-color: aliceblue;
-
-    height: auto;
-    min-height: 115px;
-
-}
-
-.answer.line {
-
-    padding: 0.3em;
-
-}
-
-.answer.line:nth-child(odd) { 
-
-    background-color: rgb(226, 240, 253);
-
- }
- 
- .answer.line:nth-child(even) { 
-
-    background-color: rgb(222, 230, 236);
+    text-align: justify;
 
  }
 
+.options.box {
+
+    background-color: rgb(249, 249, 233);
+    color: rgb(36, 63, 97);
+
+}
+
+.options.box .input.radio {
+
+    height: fit-content;
+
+}

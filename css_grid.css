@@ -84,3 +84,10 @@
     grid-template-columns: 1fr 1fr 1fr 16fr 1fr;
 
 }
+
+.option.grid {
+    /* css_preteste */
+
+    grid-template-columns: 2fr 1fr 15fr;
+
+}

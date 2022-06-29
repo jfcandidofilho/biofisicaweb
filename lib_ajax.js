@@ -87,6 +87,13 @@ function act_content( content ){
 // Act the navigated page's content
 function act_pre( content ){
 
-    act( "content", content, false );
+    act( "content_test", content, false );
+
+}
+
+// Act the navigated page's content
+function act_pos( content ){
+
+    act( "content_test", content, false );
 
 }

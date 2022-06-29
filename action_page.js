@@ -26,9 +26,20 @@ function load_page( file_name ){
 
         console.log( ":: pre-test loading..." );
 
-        gen_pre();
+        gen_pre( "pre" );
 
         console.log( ":: pre-test OK!" );
+
+    }
+    
+    // Case the loaded page is the "Pós-teste" page:
+    if ( file_name.localeCompare( 'pos-teste' ) == 0 ){
+
+        console.log( ":: pos-test loading..." );
+
+        gen_pos("pos");
+
+        console.log( ":: pos-test OK!" );
 
     }
 
@@ -68,15 +79,9 @@ function load_page( file_name ){
         // Bubbles the values calculated
         set_bubble(); 
 
-        // Set the graph to [K]e x EK
-        // dataset_labels = create_x( val.CeK );
-        // dataset_points = create_y( dataset_labels, 1, val.CiK );
-
+        // DEBUG
         console.table( "labels", dataset_labels );
         console.table( "datapoints", dataset_points );
-        
-        // Destroy graph to build graph
-        //cenaena.destroy();
         
         // Draws the graph of correlations
         graph_draw();
