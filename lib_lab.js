@@ -1,5 +1,4 @@
 // Variables list
-var val = null;
 
 /**
  * 
@@ -22,7 +21,7 @@ function update_variables() {
 
     var ranger = document.getElementsByClassName("ranger input");
     
-    val = {
+    _VAL = {
 
         pK      :   parseFloat( nullishRet( 
                         optionalChain( ranger, 0 ), '1' ).value ),
@@ -57,7 +56,7 @@ function update_variables() {
 
     }
 
-    //console.table( val );
+    //console.table( _VAL );
 
 }
 
@@ -96,9 +95,9 @@ function condutivity( e, g ){
 function calc_nernst(){
 
     // Calculates
-    val.EK  = nernst( 1, val.CiK, val.CeK );
-    val.ENa = nernst( 1, val.CiNa, val.CeNa );
-    val.ECl = nernst( -1, val.CiCl, val.CeCl );
+    _VAL.EK  = nernst( 1, _VAL.CiK, _VAL.CeK );
+    _VAL.ENa = nernst( 1, _VAL.CiNa, _VAL.CeNa );
+    _VAL.ECl = nernst( -1, _VAL.CiCl, _VAL.CeCl );
 
     // Updates screen
     var ek = document.getElementsByClassName("nernst target EK");
@@ -108,27 +107,27 @@ function calc_nernst(){
     var opChain;
     
     opChain = nullishRet( optionalChain( ek, 0 ), false );
-    opChain ? opChain.innerHTML = round( val.EK ) + " mV" : null;
+    opChain ? opChain.innerHTML = round( _VAL.EK ) + " mV" : null;
     
     opChain = nullishRet( optionalChain( ena, 0 ), false );
-    opChain ? opChain.innerHTML = round( val.ENa ) + " mV" : null;
+    opChain ? opChain.innerHTML = round( _VAL.ENa ) + " mV" : null;
 
     opChain = nullishRet( optionalChain( ecl, 0 ), false );
-    opChain ? opChain.innerHTML = round( val.ECl ) + " mV" : null;
+    opChain ? opChain.innerHTML = round( _VAL.ECl ) + " mV" : null;
 
     // Console
-    if( val.EK == val.ENa && val.ENa == val.ECl )
-        console.log( "Nernst -> EK = ENa = ECl =", val.EK );
+    if( _VAL.EK == _VAL.ENa && _VAL.ENa == _VAL.ECl )
+        console.log( "Nernst -> EK = ENa = ECl =", _VAL.EK );
     else {
         console.log(
             "Nernst", 
-            "\nEK =", val.EK, 
-            "\nENa =", val.ENa, 
-            "\nECl =", val.ECl
+            "\nEK =", _VAL.EK, 
+            "\nENa =", _VAL.ENa, 
+            "\nECl =", _VAL.ECl
             );
 
         // DEBUG
-        // console.table( val );
+        // console.table( _VAL );
         }
 
 }
@@ -138,9 +137,9 @@ function calc_goldman(){
 
     // Calculates
     var Em = goldman( 
-        { K : val.pK, Na: val.pNa, Cl: val.pCl },
-        { K : val.CiK, Na: val.CiNa, Cl: val.CiCl },
-        { K : val.CeK, Na: val.CeNa, Cl: val.CeCl }
+        { K : _VAL.pK, Na: _VAL.pNa, Cl: _VAL.pCl },
+        { K : _VAL.CiK, Na: _VAL.CiNa, Cl: _VAL.CiCl },
+        { K : _VAL.CeK, Na: _VAL.CeNa, Cl: _VAL.CeCl }
     );
 
     // Updates screen
@@ -165,8 +164,8 @@ function calc_condutividade(){
 
     // Calculates
     var Em = condutivity( 
-        { K : val.EK, Na: val.ENa, Cl: val.ECl },
-        { K : val.gK, Na: val.gNa, Cl: val.gCl }
+        { K : _VAL.EK, Na: _VAL.ENa, Cl: _VAL.ECl },
+        { K : _VAL.gK, Na: _VAL.gNa, Cl: _VAL.gCl }
     );
 
     // Updates screen

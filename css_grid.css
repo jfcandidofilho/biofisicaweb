@@ -36,6 +36,13 @@
 
 }
 
+.selector.box.grid {
+    /* css_variables */
+
+    grid-template-columns: 5fr 2fr 5fr 2fr 5fr;
+
+}
+
 .equation.nernst.grid {
     /* css_equations */
 
@@ -72,21 +79,21 @@
 }
 
 .question.grid {
-    /* css_preteste */
+    /* css_pptests */
 
     grid-template-columns: 1fr 18fr 1fr;
 
 }
 
 .answer.grid {
-    /* css_preteste */
+    /* css_pptests */
 
     grid-template-columns: 1fr 1fr 1fr 16fr 1fr;
 
 }
 
 .option.grid {
-    /* css_preteste */
+    /* css_pptests */
 
     grid-template-columns: 2fr 1fr 15fr;
 

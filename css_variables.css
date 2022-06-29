@@ -22,20 +22,62 @@
 
  }
 
-.child.var.k { 
+.child.var.k,
+.selector.box.grid .btn.k
+ { 
     border-color: #fefefe; 
     background-color: gray; 
     color: #ddd; 
 }
 
-.child.var.na { 
+.child.var.na,
+.selector.box.grid .btn.na { 
     border-color: #fefefe; 
     background-color: silver; 
     color: #333; 
 }
 
-.child.var.cl { 
+.child.var.cl,
+.selector.box.grid .btn.cl { 
     border-color: #fefefe; 
     background-color: rgb(227, 246, 189); 
     color: #333; 
+}
+
+.selector.box.grid {
+
+    background-color: aliceblue;
+
+}
+
+.selector.box.grid .btn {
+
+    padding: 1em;
+
+    font-weight: bold;
+
+}
+
+.selector.box.grid .btn .child {
+
+    text-align: center;
+
+}
+
+.box.k {
+
+    display: grid;
+
+}
+
+.box.na {
+
+    display: none;
+
+}
+
+.box.cl {
+
+    display: none;
+
 }

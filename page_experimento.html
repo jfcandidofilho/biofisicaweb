@@ -19,7 +19,7 @@
 
     <div class="control-panel bi column">
 
-        <h3 class="variables title">Controle de Variáveis</h3>
+        <h3 class="variables title">Visor</h3>
 
         <div class="equation">
 
@@ -182,7 +182,40 @@
 
         <div>&nbsp;</div> -->
 
-        <div class="variables grid">
+        <h3 class="variables title">Controle de Variáveis</h3>
+
+        <div class="selector box bi column grid">
+
+            <div class="parent btn k"
+            onclick="javascript: toggle('K','Na','Cl');">
+                <div class="child">
+                    Potássio
+                </div>
+            </div>
+
+            <div class="empty column"></div>
+            
+            <div class="parent btn na"
+            onclick="javascript: toggle('Na','K','Cl');">
+                <div class="child">
+                    Sódio
+                </div>
+            </div>
+
+            <div class="empty column"></div>
+            
+            <div class="parent btn cl"
+            onclick="javascript: toggle('Cl','Na','K');">
+                <div class="child">
+                    Cloro
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="empty column"></div>
+
+        <div id="box_K" class="variables grid box k">
 
             <!-- pK -->
             <div class="empty column"></div>
@@ -236,12 +269,9 @@
             </div>
             <div class="empty column"></div>
 
-            <!-- Spacer -->
-            <div></div>
-            <div>&nbsp;</div>
-            <div></div>
-            <div>&nbsp;</div>
-            <div></div>
+        </div>
+        
+        <div id="box_Na" class="variables grid box na">
 
             <!-- pNa -->
             <div class="empty column"></div>
@@ -295,13 +325,10 @@
             </div>
             <div class="empty column"></div>
 
-            <!-- Spacer -->
-            <div></div>
-            <div>&nbsp;</div>
-            <div></div>
-            <div>&nbsp;</div>
-            <div></div>
-
+        </div>
+        
+        <div id="box_Cl" class="variables grid box cl">
+            
             <!-- pCl -->
             <div class="empty column"></div>
             <div class="parent ion">
