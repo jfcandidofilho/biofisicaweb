@@ -21,7 +21,7 @@
 
             <div class=\"option a grid\">
 
-                <input type=\"radio\" id=\"" . $question_prefix . "_" . $question_number . "_a\" name=\"prefix " . $question_number . "\" class=\"input radio\" value=\"prefix_" . $question_number . "_a\" onclick=\"javascript: set_answer( $question_prefix, $question_number, a);\" />
+                <input type=\"radio\" id=\"" . $question_prefix . "_" . $question_number . "_a\" name=\"prefix " . $question_number . "\" class=\"input radio\" value=\"prefix_" . $question_number . "_a\" onclick=\"javascript: set_answer( '$question_prefix', '$question_number', 'a');\" />
 
                 <div class=\"empty column\"></div>
 
@@ -31,7 +31,7 @@
 
             <div class=\"option b grid\">
 
-                <input type=\"radio\" id=\"" . $question_prefix . "_" . $question_number . "_b\" name=\"prefix " . $question_number . "\" class=\"input radio\" value=\"prefix_" . $question_number . "_b\" onclick=\"javascript: set_answer( $question_prefix, $question_number, b);\" />
+                <input type=\"radio\" id=\"" . $question_prefix . "_" . $question_number . "_b\" name=\"prefix " . $question_number . "\" class=\"input radio\" value=\"prefix_" . $question_number . "_b\" onclick=\"javascript: set_answer( '$question_prefix', '$question_number', 'b');\" />
 
                 <div class=\"empty column\"></div>
 
@@ -41,7 +41,7 @@
 
             <div class=\"option c grid\">
 
-                <input type=\"radio\" id=\"" . $question_prefix . "_" . $question_number . "_c\" name=\"prefix " . $question_number . "\" class=\"input radio\" value=\"prefix_" . $question_number . "_c\" onclick=\"javascript: set_answer( $question_prefix, $question_number, c);\" />
+                <input type=\"radio\" id=\"" . $question_prefix . "_" . $question_number . "_c\" name=\"prefix " . $question_number . "\" class=\"input radio\" value=\"prefix_" . $question_number . "_c\" onclick=\"javascript: set_answer( '$question_prefix', '$question_number', 'c');\" />
 
                 <div class=\"empty column\"></div>
 
@@ -51,7 +51,7 @@
 
             <div class=\"option d grid\">
 
-                <input type=\"radio\" id=\"" . $question_prefix . "_" . $question_number . "_d\" name=\"prefix " . $question_number . "\" class=\"input radio\" value=\"prefix_" . $question_number . "_d\" onclick=\"javascript: set_answer( $question_prefix, $question_number, d);\" />
+                <input type=\"radio\" id=\"" . $question_prefix . "_" . $question_number . "_d\" name=\"prefix " . $question_number . "\" class=\"input radio\" value=\"prefix_" . $question_number . "_d\" onclick=\"javascript: set_answer( '$question_prefix', '$question_number', 'd');\" />
 
                 <div class=\"empty column\"></div>
 
