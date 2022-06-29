@@ -42,6 +42,15 @@ function load_page( file_name ){
         console.log( ":: pos-test OK!" );
 
     }
+    
+    // Case the loaded page is the "Resultados" page:
+    if ( file_name.localeCompare( 'resultados' ) == 0 ){
+
+        console.log( ":: resultados loading..." );
+
+        console.log( ":: resultados OK!" );
+
+    }
 
     // Case the loaded page is the "Experimentos" page:
     if( file_name.localeCompare( "experimento" ) == 0 ) {
