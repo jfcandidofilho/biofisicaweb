@@ -7,7 +7,7 @@ function fetch(
     var xhr = new XMLHttpRequest();
 
     var getvars     = method == "GET" ? "?" + env_vars : null;
-    var postvars    = method == "GET" ? null : env_vars;
+    var postvars    = method == "POST" ? null : env_vars;
 
     xhr.open( method, file + getvars, async );
 
