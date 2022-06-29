@@ -151,7 +151,9 @@ var pre_entries = {
                 "Não modifica o potencial de repouso"
                 )
         ]
-    ]
+    ],
+
+    correct: [ 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a' ]
 
 };
 

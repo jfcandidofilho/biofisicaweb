@@ -178,7 +178,9 @@ var pos_entries = {
                 "Cl-"
                 )
         ]
-    ]
+    ],
+
+    correct: [ 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a' ]
 
 };
 

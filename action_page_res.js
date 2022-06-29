@@ -42,3 +42,49 @@ function populate_options( prefix ){
     }
 
 }
+
+function check_answers(){
+
+    var qty_questions = window[ 'pre_entries' ]['q_num'].length;
+
+    for( var i = 0; i < qty_questions; i++ ){
+
+        if( _ANSWERS.PRE[ i ] !== undefined ){
+            if( 
+                _ANSWERS.PRE[ i ].localeCompare( pre_entries.correct[ i ] ) == 0 
+            ){
+
+                document.getElementById("aq" + (i + 1)).innerHTML = "Certo!";
+                
+            } else {
+
+                document.getElementById("aq" + (i + 1)).innerHTML = "Errado! Resposta correta: " + pre_entries.correct[ i ];
+
+            }
+        } else {
+
+            document.getElementById("aq" + (i + 1)).innerHTML = "Alternativa não selecionada";
+
+        }
+
+        if( _ANSWERS.POS[ i ] !== undefined ){
+            if( 
+                _ANSWERS.POS[ i ].localeCompare( pos_entries.correct[ i ] ) == 0 
+            ){
+
+                document.getElementById("bq" + (i + 1)).innerHTML = "Certo!";
+                
+            } else {
+
+                document.getElementById("bq" + (i + 1)).innerHTML = "Errado! Resposta correta: " + pos_entries.correct[ i ];
+
+            }
+        } else {
+
+            document.getElementById("bq" + (i + 1)).innerHTML = "Alternativa não selecionada";
+
+        }
+
+    }
+
+}

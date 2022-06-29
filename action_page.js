@@ -55,6 +55,9 @@ function load_page( file_name ){
 
         console.log( ":: resultados loading..." );
 
+        //check_answers();
+        setTimeout( function() { check_answers(); }, 600 );
+
         console.log( ":: resultados OK!" );
 
     }
