@@ -11,13 +11,21 @@ function fetch(
 
     xhr.open( method, file + getvars, async );
 
-    xhr.onload = function(){ 
-    
+    xhr.onreadystatechange = function(){
+        if (xhr.readyState === 4){
+
+            // If simple act, garantee error
+            // If an specific act, guarantee it's called
+            if( f === act ) f(); else f( xhr.response ); 
+
+        }
+    };
+
+    /* xhr.onload = function(){ 
         // If simple act, garantee error
         // If an specific act, guarantee it's called
         if( f === act ) f(); else f( xhr.response ); 
-    
-    }
+    } */
 
     xhr.send( postvars );
 

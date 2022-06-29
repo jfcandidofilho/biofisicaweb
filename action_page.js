@@ -29,6 +29,9 @@ function load_page( file_name ){
 
         gen_pre( "pre" );
 
+        //populate_options("pre");
+        setTimeout( function() { populate_options("pre"); }, 600 );
+
         console.log( ":: pre-test OK!" );
 
     }
@@ -39,6 +42,9 @@ function load_page( file_name ){
         console.log( ":: pos-test loading..." );
 
         gen_pos("pos");
+
+        //populate_options("pos");
+        setTimeout( function() { populate_options("pos"); }, 600 );
 
         console.log( ":: pos-test OK!" );
 
