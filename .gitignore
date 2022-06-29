@@ -1,6 +1,7 @@
 guy/
 test.html
-Site.css
+test.css
+test.js
 
 # Created by https://www.toptal.com/developers/gitignore/api/kate,visualstudiocode,vim,backup
 # Edit at https://www.toptal.com/developers/gitignore?templates=kate,visualstudiocode,vim,backup
