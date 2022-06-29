@@ -61,20 +61,7 @@ var callbacks = {
         calc_condutividade();
         calc_goldman();
 
-        //update_variables();
-
-        // Set the graph to [K]e x EK
-        dataset_labels = create_x( val.CeK );
-        dataset_points = create_y( dataset_labels, 1, val.CiK );
-
-        console.table( "labels", dataset_labels );
-        console.table( "datapoints", dataset_points );
-        
-        // Destroy graph to build graph
-        cenaena.destroy();
-        
-        // Draws the graph of correlations
-        graph_draw();
+        refresh_graph();
 
     },
 

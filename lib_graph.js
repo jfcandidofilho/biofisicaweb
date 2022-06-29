@@ -1,7 +1,5 @@
 /** DEPENDENDS ON chart.js (CDN) */
 
-var cenaena = new Chart();
-
 // Default X-Axis
 var dataset_labels = [
     [0.1], 
@@ -75,35 +73,70 @@ function create_y( x, valence, c_internal ){
 
 }
 
-function graph_draw() {
+function refresh_graph(){
+
+    // Set the graph to [ion]e x E(ion)
+    dataset_labels = create_x( _VAL['Ce' + _ION] );
+    dataset_points = create_y( dataset_labels, 1, _VAL['Ci' + _ION] );
+
+    // DEBUG
+    console.table( "labels", dataset_labels );
+    console.table( "datapoints", dataset_points );
+
+    // Destroy graph to build graph
+    _GRAPH.destroy();
+
+    // Draws the graph of correlations
+    graph_draw( _ION );
+
+}
+
+function graph_draw( ion = "K" ) {
 
     var ctx = document.getElementById('graph_canva');
 
     if( ctx != null ) { ctx = ctx.getContext('2d'); }
     else { return 0; }
 
+    // Cor azul: rgb(54, 162, 235)
+
     const data = {
         labels: dataset_labels,
         datasets: [{
-            label: '[K]e x Ek',
+            label: '[' + ion + ']e x E' + ion,
             data: dataset_points[0],
-            borderColor: 'rgb(54, 162, 235)',
+            borderColor: 'rgb(237, 73, 27)',
             fill: false,
             tension: 0.4
         }]
     };
 
     
-    cenaena = new Chart(ctx, {
+    _GRAPH = new Chart(ctx, {
         type: 'line',
         data: data,
         options: {
             responsive: true,
             plugins: {
+
+                zoom: {
+                    pan: {
+                        enabled: true,
+                        overScaleMode: 'xy'
+                    },
+                    zoom: {
+                        wheel: {
+                        enabled: true,
+                        },
+                        mode: 'xy'
+                    }
+                },
+
                 title: {
                     display: true,
-                    text: 'Interpolação cúbica das concentrações externas e potencial'
+                    text: 'Interpolação cúbica das concentrações externas e do potencial do íon ' + ion
                 },
+
                 tooltip: {
                     callbacks: {
 
@@ -134,7 +167,7 @@ function graph_draw() {
                     display: true,
                     title: {
                         display: true,
-                        text: '[K]e (mM)'
+                        text: '[' + ion + ']e (mM)'
                     },
                     ticks: {
                         callback: function (label_list, index) {
@@ -147,7 +180,7 @@ function graph_draw() {
                     display: true,
                     title: {
                         display: true,
-                        text: 'Ek (mV)'
+                        text: 'E' + ion + ' (mV)'
                     }
                 }
             }

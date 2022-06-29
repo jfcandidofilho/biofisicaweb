@@ -94,7 +94,7 @@ function load_page( file_name ){
         console.table( "datapoints", dataset_points );
         
         // Draws the graph of correlations
-        graph_draw();
+        graph_draw( _ION );
     
     }
 

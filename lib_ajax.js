@@ -80,7 +80,7 @@ function act_content( content ){
     set_bubble();
 
     // Draws the graph of correlations
-    graph_draw();
+    graph_draw( _ION );
 
 }
 
