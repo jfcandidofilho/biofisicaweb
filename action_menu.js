@@ -6,7 +6,8 @@ var menu_entries = {
         "objetivos", 
         "pre-teste", 
         "experimento", 
-        "pos-teste"
+        "pos-teste",
+        "resultados"
     ],
 
     alt :   [
@@ -14,7 +15,8 @@ var menu_entries = {
         "Os Objetivos do Biofísica Web", 
         "Pré-Testes dos Experimentos", 
         "Experimentos a serem explorados", 
-        "Pós-Testes dos Experimentos"
+        "Pós-Testes dos Experimentos",
+        "Resultados do Testes"
     ],
 
     text :  [
@@ -22,7 +24,8 @@ var menu_entries = {
         "OBJETIVOS",
         "PRÉ-TESTE",
         "EXPERIMENTOS",
-        "PÓS-TESTE"
+        "PÓS-TESTE",
+        "RESULTADOS"
     ]
 
 };
