@@ -1,5 +1,5 @@
 // MENU entries
-const pos_entries = {
+var pos_entries = {
 
     q_num :  [
         encodeURIComponent( "1" ), 

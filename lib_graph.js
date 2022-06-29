@@ -100,7 +100,7 @@ function graph_draw( ion = "K" ) {
 
     // Cor azul: rgb(54, 162, 235)
 
-    const data = {
+    var data = {
         labels: dataset_labels,
         datasets: [{
             label: '[' + ion + ']e x E' + ion,
