@@ -4,7 +4,8 @@ var page_list = [
     "objetivos", 
     "pre-teste", 
     "experimento", 
-    "pos-teste" 
+    "pos-teste",
+    "resultados"
 ];
 
 // Loads the desired page and 
