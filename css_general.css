@@ -188,6 +188,12 @@ body {
 
 }
 
+.content {
+
+   background-color: #fff;
+
+}
+
 
 /* vertical align block-level elements */
 .parent {

@@ -6,12 +6,22 @@
 
 }
 
+.prefix.test.box {
+
+    margin-bottom: 1.5em;
+
+    background-color: aliceblue;
+
+}
+
 .content.pos,
 .content.pre {
 
-    padding: 0.5em 20%;
+    padding: 1em;
 
     background-color:rgb(160, 183, 206);
+
+    margin: 0 20%;
 
 }
 
@@ -24,7 +34,7 @@
 
 .question.box {
 
-    background-color: #435e7a;
+    background-color: #8997a5;
     color: rgb(253, 253, 238);
 
 }
