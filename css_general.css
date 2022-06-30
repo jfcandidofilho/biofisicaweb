@@ -177,10 +177,14 @@ body {
 .bottom {
 
    margin-top: 1em;
+   padding: 1em;
+
+   font-size: 8pt;
+   font-variant: small-caps;
 
 }
 
-
+.bottom a { text-decoration: none; }
 
 .blank {
 
