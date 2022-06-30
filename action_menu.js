@@ -3,7 +3,7 @@ var menu_entries = {
 
     item :  [
         "introducao", 
-        "objetivos", 
+        //"objetivos", 
         "pre-teste", 
         "experimento", 
         "pos-teste",
@@ -12,7 +12,7 @@ var menu_entries = {
 
     alt :   [
         "Uma Introdução ao Biofísica Web", 
-        "Os Objetivos do Biofísica Web", 
+        //"Os Objetivos do Biofísica Web", 
         "Pré-Testes dos Experimentos", 
         "Experimentos a serem explorados", 
         "Pós-Testes dos Experimentos",
@@ -21,7 +21,7 @@ var menu_entries = {
 
     text :  [
         "INTRODUÇÃO",
-        "OBJETIVOS",
+        //"OBJETIVOS",
         "PRÉ-TESTE",
         "EXPERIMENTOS",
         "PÓS-TESTE",
