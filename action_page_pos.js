@@ -33,9 +33,9 @@ var pos_entries = {
         encodeURIComponent(
             "Observe os dados de uma célula hipotética e assinale a alternativa correta.\
             <br />\
-            <table>\
+            <table class=\"table question\">\
                 <tr>\
-                    <th>ÍON</th>\
+                    <th>Íon</th>\
                     <th>Intracelular (mM)</th>\
                     <th>Extracelular (mM)</th>\
                     <th>Permeabilidade x 10^-8 (cm/s)</th>\

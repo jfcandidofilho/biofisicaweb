@@ -194,6 +194,52 @@ body {
 
 }
 
+.table.question {
+
+   margin: 0 auto;
+   margin-top: 1em;
+   padding: 0.25em; 
+   
+   background-color: aliceblue;
+   
+   text-align:center;
+
+}
+
+.table.question tr {
+
+   padding: 0.5em;
+   
+}
+
+.table.question th {
+
+   padding: 0.5em; 
+   
+   background-color:#8997a5; 
+   color: #eee;
+
+}
+
+.table.question td {
+
+   background-color: #ccc;
+
+}
+
+.table.question td:first-child:not(tr > th) {
+
+   background-color: rgb(177, 189, 195);
+
+   font-weight: bold;
+
+}
+
+.table.question td:not(:first-child) {
+
+   color: rgb(69, 69, 69);;
+
+}
 
 /* vertical align block-level elements */
 .parent {
