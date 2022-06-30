@@ -10,7 +10,7 @@
 
     $template = "
     <!-- Question #" . $question_number . " -->
-    <div class=\"prefix test " . $question_number . " box\">
+    <div class=\"$question_prefix test " . $question_number . " box\">
 
         <div class=\"question box\">
             <h3 class=\"title\">Questão " . $question_number . "</h3>
