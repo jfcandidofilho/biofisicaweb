@@ -56,3 +56,13 @@ function template_tests( prefix, data ) {
         </div>\
     ";
 }
+
+function template_menu( data ){
+
+    return "\
+        <a href=\"#" + data[ item ] + "\" alt=\"" + data[ alt ] + "\" onclick=\"javascript: load_page('" + data[ item ] + "');\" class=\"menu item " + data[ item ] + "\">\
+        " + data[ text ] + "\
+        </a> &nbsp;\
+        ";
+
+}

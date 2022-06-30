@@ -33,19 +33,24 @@ var menu_entries = [
 // Generate the MENU
 function gen_menu(){
 
-    for( var i = 0; i < menu_entries[item].length; i++ ){
-    
-        fetch(
-    
-            "template_menu.php", 
-            
-            "item=" + menu_entries[item][i] + "&alt=" + menu_entries[alt][i] + "&text=" + menu_entries[text][i],
-            
-            "GET", false, act_menu
-            
-            );
+    // DEBUG
+    console.log( "gen_menu()" );
 
-        setTimeout( function() {}, 100 );
+    for( var i = 0; i < menu_entries[item].length; i++ ){
+
+        console.log( "for", i );
+
+        var data = [
+
+            menu_entries[item][i],
+
+            menu_entries[alt][i],
+
+            menu_entries[text][i]
+
+        ];
+
+        act_menu( template_menu( data ) );
     
     }
 
