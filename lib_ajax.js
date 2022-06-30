@@ -21,12 +21,6 @@ function fetch(
         }
     };
 
-    /* xhr.onload = function(){ 
-        // If simple act, garantee error
-        // If an specific act, guarantee it's called
-        if( f === act ) f(); else f( xhr.response ); 
-    } */
-
     xhr.send( postvars );
 
 }
@@ -92,15 +86,8 @@ function act_content( content ){
 
 }
 
-// Act the navigated page's content
-function act_pre( content ){
-
-    act( "content_test", content, false );
-
-}
-
-// Act the navigated page's content
-function act_pos( content ){
+// Act the tests' page's content
+function act_tests( content ){
 
     act( "content_test", content, false );
 

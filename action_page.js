@@ -13,7 +13,7 @@ var page_list = [
 function load_page( file_name ){
 
     fetch(  "page_" + file_name + ".html", 
-            null, "GET", true, act_content 
+            null, "GET", false, act_content 
         );
 
     // Cleans MathJax
@@ -27,10 +27,10 @@ function load_page( file_name ){
 
         console.log( ":: pre-test loading..." );
 
-        gen_pre( "pre" );
+        gen_tests( "pre" );
 
-        //populate_options("pre");
-        setTimeout( function() { populate_options("pre"); }, 600 );
+        populate_options("pre");
+        //setTimeout( function() { populate_options("pre"); }, 600 );
 
         console.log( ":: pre-test OK!" );
 
@@ -41,10 +41,10 @@ function load_page( file_name ){
 
         console.log( ":: pos-test loading..." );
 
-        gen_pos("pos");
+        gen_tests("pos");
 
-        //populate_options("pos");
-        setTimeout( function() { populate_options("pos"); }, 600 );
+        populate_options("pos");
+        //setTimeout( function() { populate_options("pos"); }, 600 );
 
         console.log( ":: pos-test OK!" );
 

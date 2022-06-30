@@ -1,7 +1,7 @@
 // MENU entries
-var menu_entries = {
+var menu_entries = [
 
-    item :  [
+    [   // [] item
         "introducao", 
         //"objetivos", 
         "pre-teste", 
@@ -10,7 +10,7 @@ var menu_entries = {
         "resultados"
     ],
 
-    alt :   [
+    [   // [] alt
         "Uma Introdução ao Biofísica Web", 
         //"Os Objetivos do Biofísica Web", 
         "Pré-Testes dos Experimentos", 
@@ -19,7 +19,7 @@ var menu_entries = {
         "Resultados do Testes"
     ],
 
-    text :  [
+    [   // [] text
         "INTRODUÇÃO",
         //"OBJETIVOS",
         "PRÉ-TESTE",
@@ -28,20 +28,20 @@ var menu_entries = {
         "RESULTADOS"
     ]
 
-};
+];
 
 // Generate the MENU
 function gen_menu(){
 
-    for( var i = 0; i < menu_entries.item.length; i++ ){
+    for( var i = 0; i < menu_entries[item].length; i++ ){
     
         fetch(
     
             "template_menu.php", 
             
-            "item=" + menu_entries.item[i] + "&alt=" + menu_entries.alt[i] + "&text=" + menu_entries.text[i],
+            "item=" + menu_entries[item][i] + "&alt=" + menu_entries[alt][i] + "&text=" + menu_entries[text][i],
             
-            "GET", true, act_menu
+            "GET", false, act_menu
             
             );
 
