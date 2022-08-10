@@ -1,3 +1,4 @@
+// Toggles which ion is at user disposal in the 'panel'
 function toggle( 
     on = 'K', off1 = 'Na', off2 = 'Cl', pre = 'box_', pos ='' 
     ){

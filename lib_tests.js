@@ -1,3 +1,4 @@
+// Sets ans stores the question's answer's value upon the user click
 function set_answer( prefix, number, option ){
 
     // DEBUG
@@ -16,6 +17,7 @@ function set_answer( prefix, number, option ){
 
 }
 
+// Populates the test with the answers selected by the user
 function populate_options( prefix ){
 
     // DEBUG
@@ -48,6 +50,7 @@ function populate_options( prefix ){
 
 }
 
+// Verify the answers of the user - if any
 function check_answers(){
 
     // DEBUG
@@ -97,6 +100,7 @@ function check_answers(){
 
 }
 
+// Generates each test against a template
 function gen_tests( prefix ){
 
     // DEBUG

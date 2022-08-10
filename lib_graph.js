@@ -73,6 +73,7 @@ function create_y( x, valence, c_internal ){
 
 }
 
+// Refreshes the graph
 function refresh_graph(){
 
     // Set the graph to [ion]e x E(ion)
@@ -91,6 +92,7 @@ function refresh_graph(){
 
 }
 
+// Draws the graph
 function graph_draw( ion = "K" ) {
 
     var ctx = document.getElementById('graph_canva');

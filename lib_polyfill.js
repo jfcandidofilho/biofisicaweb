@@ -11,11 +11,14 @@
 //      where   a = result of optionalChaining(...)
 //              b = default result to be returned (be smart!)
 
+// Builds optional chaining for ECMA5
 function optionalChain(source, item) {
     var _chained;
     return (_chained = source) === null || _chained === undefined ? undefined : _chained[item];
 }
 
+// Builds null return for ECMA5
+// TODO don't quite remember this and why I need it
 function nullishRet(item, default_result) {
     var _nullishc;
     return (_nullishc = item) !== null && _nullishc !== undefined ? _nullishc : default_result;
