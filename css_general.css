@@ -73,11 +73,19 @@ body {
 
 }
 
+.monospaced {
+
+   font-family: monospace;
+
+}
+
 .text.column {
 
    padding: 1em;
 
    background-color: aliceblue;
+
+   text-align: justify;
 
 }
 
