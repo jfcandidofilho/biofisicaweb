@@ -81,3 +81,33 @@
     display: none;
 
 }
+
+.legend {
+
+    font-weight: bold;
+
+    text-align: center;
+
+}
+
+.equation.legend {
+
+    color: aliceblue;
+
+}
+
+.ion.legend,
+.slider.legend {
+
+    color: #333;
+    background-color: aliceblue;
+
+    font-size: 10pt;
+
+}
+
+.slider.legend {
+
+    padding: 0 5em 0 3em;
+
+}
