@@ -189,9 +189,9 @@ function set_state( state ){
         case "rest":
 
             // Permeability
-            set_range( "pK", 650 );
-            set_range( "pNa", 15 );
-            set_range( "pCl", 45 );
+            set_range( "pK", 2 );   // OLD 650
+            set_range( "pNa", 100 );// OLD 15
+            set_range( "pCl", 45 ); // OLD 45
 
             // Condutivity
             set_range( "gK", 0.45 );
@@ -203,9 +203,9 @@ function set_state( state ){
         case "hyper":
 
             // Permeability
-            set_range( "pK", 1000 );
-            set_range( "pNa", 15 );
-            set_range( "pCl", 45 );
+            set_range( "pK", 6 );    // OLD 1000
+            set_range( "pNa", 130 ); // OLD 15
+            set_range( "pCl", 45 );  // OLD 45
 
             // Condutivity
             set_range( "gK", 1 );
@@ -217,9 +217,9 @@ function set_state( state ){
         case "pike":
 
             // Permeability
-            set_range( "pK", 650 );
-            set_range( "pNa", 75000 );
-            set_range( "pCl", 2 );
+            set_range( "pK", 10 );      // OLD 650
+            set_range( "pNa", 160 );    // OLD 75000
+            set_range( "pCl", 2 );      // OLD 2
 
             // Condutivity
             set_range( "gK", 0.4 );
