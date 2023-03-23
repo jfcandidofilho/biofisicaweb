@@ -94,6 +94,8 @@
 
     color: aliceblue;
 
+    font-size: 20pt;
+
 }
 
 .ion.legend,
@@ -102,11 +104,17 @@
     color: #333;
     background-color: aliceblue;
 
-    font-size: 10pt;
+}
+
+.ion.legend {
+
+    font-size: 14pt;
 
 }
 
 .slider.legend {
+
+    font-size: 10pt;
 
     padding: 0 5em 0 3em;
 

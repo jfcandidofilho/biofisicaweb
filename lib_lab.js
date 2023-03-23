@@ -189,42 +189,42 @@ function set_state( state ){
         case "rest":
 
             // Permeability
-            set_range( "pK", 2 );   // OLD 650
-            set_range( "pNa", 100 );// OLD 15
-            set_range( "pCl", 45 ); // OLD 45
+            set_range( "pK", 100 );   // OLD 650
+            set_range( "pNa", 4995 );// OLD 15
+            set_range( "pCl", 0 ); // OLD 45
 
             // Condutivity
-            set_range( "gK", 0.45 );
-            set_range( "gNa", 0.03 );
-            set_range( "gCl", 0.15 );
+            set_range( "gK", 0.001 );
+            set_range( "gNa", 5 );
+            set_range( "gCl", 0.001 );
 
             break;
 
         case "hyper":
 
             // Permeability
-            set_range( "pK", 6 );    // OLD 1000
-            set_range( "pNa", 130 ); // OLD 15
-            set_range( "pCl", 45 );  // OLD 45
+            set_range( "pK", 1000 );    // OLD 1000
+            set_range( "pNa", 7500 ); // OLD 15
+            set_range( "pCl", 100 );  // OLD 45
 
             // Condutivity
             set_range( "gK", 1 );
-            set_range( "gNa", 0.03 );
-            set_range( "gCl", 0.15 );
+            set_range( "gNa", 100 );
+            set_range( "gCl", 1 );
 
             break;
 
         case "pike":
 
             // Permeability
-            set_range( "pK", 10 );      // OLD 650
-            set_range( "pNa", 160 );    // OLD 75000
-            set_range( "pCl", 2 );      // OLD 2
+            set_range( "pK", 650 );      // OLD 650
+            set_range( "pNa", 3500 );    // OLD 75000
+            set_range( "pCl", 50 );      // OLD 2
 
             // Condutivity
-            set_range( "gK", 0.4 );
-            set_range( "gNa", 100 );
-            set_range( "gCl", 0.18 );
+            set_range( "gK", 5 );
+            set_range( "gNa", 50 );
+            set_range( "gCl", 5 );
     
             break;
 
@@ -232,12 +232,12 @@ function set_state( state ){
 
             // Concentration
             set_range( "CiK", 150 );
-            set_range( "CiNa", 50 );
-            set_range( "CiCl", 10 );
+            set_range( "CiNa", 10 );
+            set_range( "CiCl", 5 );
 
-            set_range( "CeK", 5 );
-            set_range( "CeNa", 460 );
-            set_range( "CeCl", 125 );
+            set_range( "CeK", 6 );
+            set_range( "CeNa", 150 );
+            set_range( "CeCl", 115 );
     
             break;
 
