@@ -8,7 +8,7 @@
 }
 .ranger.input {
   -webkit-appearance: none;
-  width: calc(77%);
+  width: calc(70%); /* was 77% but UNINOVE's Chromebooks 'bugs' it */
   height: 10px;
   border-radius: 5px;
   background: #d7dcdf;
